@@ -12,6 +12,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-list li a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        // Verifica se a rolagem está dentro da seção (ajuste o 150 se necessário)
+        if (pageYOffset >= (sectionTop - 150)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
+        }
+    });
+});
+
 // Animate skill bars on scroll
 const observerOptions = {
     threshold: 0.5

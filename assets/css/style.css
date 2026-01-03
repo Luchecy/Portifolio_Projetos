@@ -42,6 +42,21 @@ nav {
     padding: 0 3rem;
 }
 
+/* Estilo para o link que estiver ativo */
+.nav-list li a.active {
+    color: #fff; /* Deixa o texto branco */
+}
+
+.nav-list li a.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-yellow); /* Sua cor amarela */
+    margin-top: 4px;
+    transition: width 0.3s ease;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -780,7 +795,7 @@ nav {
     padding: 3rem 2rem;
     border-radius: 12px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(211, 14, 14, 0.05);
 }
 
 .social-card:hover {
@@ -805,7 +820,6 @@ nav {
 
 .social-card:hover .social-icon {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(245, 180, 65, 0.4);
 }
 
 .social-card h3 {
