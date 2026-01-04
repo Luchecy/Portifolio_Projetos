@@ -14,6 +14,18 @@
     --text-gray: #A0A0A0;
 }
 
+/* Classe para o verde neon nos textos */
+.txt-neon {
+    color: #2ecc71; /* Cor verde principal */
+    font-weight: bold;
+}
+
+/* Estilo para o parágrafo não quebrar de forma estranha */
+.about-text {
+    line-height: 1.8;
+    color: #e0e0e0; /* Cor do resto do texto (cinza claro) */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--darker-bg);
@@ -381,6 +393,15 @@ nav {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
+}
+
+.section-title-titulo2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-title-titulo2 .highlight {
+    color: var(--primary-yellow);
 }
 
 .section-title .highlight {
@@ -907,8 +928,10 @@ nav {
 }
 
 .learning-box {
-    background: rgba(46, 204, 113, 0.1);
+    /* Define o fundo escuro com o gradiente suave nas bordas */
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
     border: 1px solid var(--primary-green);
+    border-color: linear-gradient(135deg, rgba(255, 165, 0, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
     padding: 2rem;
     border-radius: 12px;
 }
@@ -1073,10 +1096,6 @@ nav {
     color: var(--primary-green);
     font-weight: 600;
     margin-bottom: 0.5rem;
-}
-
-.availability-status::before {
-    content: "●";
 }
 
 /* Footer */
