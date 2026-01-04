@@ -150,7 +150,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8rem 3rem 2.5rem;
+    padding: 6rem 3rem 3rem;
     position: relative;
     /* MUITO IMPORTANTE: Mude para visible para os ícones flutuarem sobre os cards */
     overflow: visible;
@@ -232,7 +232,7 @@ nav {
 }
 
 .btn-secondary {
-    color: var(--text-white);
+    color: var(--primary-green);
     background-color: var(--darker-bg);
     padding: 1rem 2rem;
     text-decoration: none;
@@ -910,10 +910,28 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.credential-item2 {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .credential-item:hover {
     transform: translateX(10px);
     border-color: var(--primary-yellow);
     box-shadow: 0 5px 20px rgba(245, 180, 65, 0.15);
+}
+
+.credential-item2:hover {
+    transform: translateX(10px);
+    border-color: var(--primary-green);
+    box-shadow: 0 5px 20px rgba(46, 204, 113, 0.1);
 }
 
 .credential-info h4 {
